@@ -39,9 +39,8 @@ export function shareEntry(entry) {
   return (dispatch) => {
     dispatch(entrySharing(entry));
 
-    fetch('https://www.reddit.com/r/leagueoflegends.json').then((results) => {
-      debugger;
+    setTimeout(() => {
       dispatch(entryShared(entry));
-    });
+    }, 1000);
   }
 }
